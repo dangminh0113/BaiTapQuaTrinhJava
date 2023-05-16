@@ -1,7 +1,5 @@
-import java.util.Map;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Iterator;
+import java.util.Map;
 
 public class TaiChuc extends HocVien {
 
@@ -31,17 +29,6 @@ public class TaiChuc extends HocVien {
                 entry.getValue().get(i).getInfo();
             }
         }
-
-        /* for (int i = 1; i <= dsMonHoc.size(); i++) {
-            Set<Map.Entry<Integer, LinkedList<MonHoc>>> set = dsMonHoc.entrySet();
-            for (Map.Entry<Integer, LinkedList<MonHoc>> e : set) {
-                System.out.println("HOC KI " + e.getKey() + " : ");
-                for (int j = 0; j < e.getValue().size(); j++) {
-                    e.getValue().get(i).getInfo();
-                }
-            }
-        } */
-
     }
 
     public String getLienKet() {

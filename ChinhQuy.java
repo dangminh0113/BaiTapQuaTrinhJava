@@ -1,7 +1,5 @@
-import java.util.Map;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Set;
+import java.util.Map;
 
 public class ChinhQuy extends HocVien {
 
@@ -25,24 +23,18 @@ public class ChinhQuy extends HocVien {
                 entry.getValue().get(i).getInfo();
             }
         }
-        /*
-         * for (int i = 1; i <= dsMonHoc.size(); i++) {
-         * Set<Map.Entry<Integer,LinkedList<MonHoc>>> set = dsMonHoc.entrySet();
-         * for (Map.Entry<Integer, LinkedList<MonHoc>> e : set) {
-         * System.out.println("HOC KI " + e.getKey() + " : ");
-         * for (int j = 0; j < e.getValue().size(); j++) {
-         * e.getValue().get(i).getInfo();
-         * }
-         * }
-         * }
-         */
-
     }
 
     public String getChinhQuyInfo(ChinhQuy sv) {
         return "[Hoc Vien Chinh Quy " + sv.getHoTen() + " | MSSV : " + sv.getMaHV() + " | Ngay Sinh : "
                 + sv.getSinhNhat() + " | Nam Hoc : " + sv.getNamHoc() + " | Diem Dau Vao : " + sv.getDiemDauVao()
                 + " ]";
+    }
+
+    @Override
+    public String toString() {
+        return "ChinhQuy [" + hoTen + " | MSSV : " + maHV + " | Ngay Sinh : " + sinhNhat + " | Nam Hoc : "
+                + namHoc + " | Diem Dau Vao : " + diemDauVao + " ]";
     }
 
 }

@@ -1,10 +1,13 @@
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Khoa {
-    String tenKhoa;
+    private String tenKhoa;
     protected ArrayList<HocVien> hv = new ArrayList<HocVien>();
+
+    /**
+     * @param tenKhoa
+     */
 
     public Khoa(String tenKhoa) {
         this.tenKhoa = tenKhoa;

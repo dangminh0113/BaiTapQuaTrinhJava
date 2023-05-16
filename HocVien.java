@@ -143,11 +143,6 @@ public class HocVien {
     return false;
   }
 
-  public String toString() {
-    return "[Hoc Vien Chinh Quy " + hoTen + " | MSSV : " + maHV + " | Ngay Sinh : " + sinhNhat + " | Nam Hoc : "
-        + namHoc + " | Diem Dau Vao : " + diemDauVao + " ]";
-  }
-
   public String getChinhQuyInfo(ChinhQuy sv) {
     return "";
   }
@@ -157,7 +152,7 @@ public class HocVien {
   }
 
   public void getInfo() {
-    System.out.println("awefwef");
+
   }
 
 }
