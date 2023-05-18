@@ -151,7 +151,11 @@ public class HocVien {
     return "";
   }
 
-  public void getInfo() {
+  public String getCaoHocInfo(CaoHoc sv) {
+    return "";
+  }
+
+  public void getKetQuaHocTap() {
 
   }
 

@@ -20,10 +20,15 @@ public class TaiChuc extends HocVien {
         this.lienket = sv.getLienKet();
     }
 
-    public void getInfo() {
+    public String getLienKet() {
+        return lienket;
+    }
+
+    @Override
+    public void getKetQuaHocTap() {
 
         for(Map.Entry<Integer, LinkedList<MonHoc>> entry : dsMonHoc.entrySet()) {
-            System.out.println("HOC KI " + entry.getKey());
+            System.out.println("HOC KI " + entry.getKey() + " : ");
             for (int i = 0; i < entry.getValue().size(); i++) {
                 
                 entry.getValue().get(i).getInfo();
@@ -31,15 +36,18 @@ public class TaiChuc extends HocVien {
         }
     }
 
-    public String getLienKet() {
-        return lienket;
-    }
-
+    @Override
     public String getTaiChucInfo(TaiChuc sv) {
         return "[Hoc Vien Tai Chuc " + sv.getHoTen() + " | MSSV : " + sv.getMaHV() + " | Ngay Sinh : "
                 + sv.getSinhNhat() + " | Nam Hoc : " + sv.getNamHoc() + " | Diem Dau Vao : " + sv.getDiemDauVao()
                 + " | Noi Lien Ket : " + sv.getLienKet() + "]";
 
+    }
+
+    @Override
+    public String toString() {
+        return "TaiChuc [" + hoTen + " | MSSV : " + maHV + " | Ngay Sinh : " + sinhNhat + " | Nam Hoc : "
+                + namHoc + " | Diem Dau Vao : " + diemDauVao + " | Noi Lien Ket : " + lienket + "]";
     }
 
 }

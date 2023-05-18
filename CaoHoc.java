@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Map;
+
 public class CaoHoc extends HocVien {
 
     private String dh;
@@ -40,11 +43,29 @@ public class CaoHoc extends HocVien {
         return vB;
     }
 
+    @Override
+    public void getKetQuaHocTap() {
+        for (Map.Entry<Integer, LinkedList<MonHoc>> entry : dsMonHoc.entrySet()) {
+            System.out.print("HOC KI " + entry.getKey());
+            for (int i = 0; i < entry.getValue().size(); i++) {
+
+                entry.getValue().get(i).getInfo();
+            }
+        }
+    }
+
+    @Override
     public String getCaoHocInfo(CaoHoc sv) {
         return "[Hoc Vien Cao Hoc " + sv.getHoTen() + " | MSSV : " + sv.getMaHV() + " | Ngay Sinh : "
                 + sv.getSinhNhat() + " | Nam Hoc : " + sv.getNamHoc() + " | Diem Dau Vao : " + sv.getDiemDauVao()
                 + " | Tot Nghiep DH : " + sv.getDH() + " | Ngay Tot Nghiep : " + sv.getNgayTN() + " | Ma Van Bang : " + sv.getVB() + "]";
 
+    }
+
+    @Override
+    public String toString() {
+        return "ChinhQuy [" + hoTen + " | MSSV : " + maHV + " | Ngay Sinh : " + sinhNhat + " | Nam Hoc : "
+                + namHoc + " | Diem Dau Vao : " + diemDauVao + " | Tot Nghiep DH : " + getDH() + " | Ngay Tot Nghiep : " + getNgayTN() + " | Ma Van Bang : " + getVB() + "]";
     }
 
 }

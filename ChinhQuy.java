@@ -14,8 +14,8 @@ public class ChinhQuy extends HocVien {
     public ChinhQuy(ChinhQuy tmp) {
         super(tmp);
     }
-
-    public void getInfo() {
+    @Override
+    public void getKetQuaHocTap() {
         for (Map.Entry<Integer, LinkedList<MonHoc>> entry : dsMonHoc.entrySet()) {
             System.out.print("HOC KI " + entry.getKey());
             for (int i = 0; i < entry.getValue().size(); i++) {
@@ -24,11 +24,10 @@ public class ChinhQuy extends HocVien {
             }
         }
     }
-
+    @Override
     public String getChinhQuyInfo(ChinhQuy sv) {
-        return "[Hoc Vien Chinh Quy " + sv.getHoTen() + " | MSSV : " + sv.getMaHV() + " | Ngay Sinh : "
-                + sv.getSinhNhat() + " | Nam Hoc : " + sv.getNamHoc() + " | Diem Dau Vao : " + sv.getDiemDauVao()
-                + " ]";
+        return "HOC VIEN CHINH QUY | Ho Va Ten : " + hoTen + " | MSSV : " + maHV + " | Ngay Sinh : " + sinhNhat + " | Nam Hoc : "
+        + namHoc + " | Diem Dau Vao : " + diemDauVao + " ]";
     }
 
     @Override

@@ -22,6 +22,10 @@ public class Khoa {
             TaiChuc tmp = (TaiChuc) sv;
             hv.add(tmp);
         }
+        if (sv instanceof CaoHoc) {
+            CaoHoc tmp = (CaoHoc) sv;
+            hv.add(tmp);
+        }
 
     }
 
@@ -57,6 +61,7 @@ public class Khoa {
                         err = 1;
                     } catch (java.util.InputMismatchException e) {
                         System.out.println("Ban Da Nhap Sai Kieu Du Lieu, Moi Ban Nhap Lai Tu Dau !");
+                        
                     }
                 }
                 if (type == 1) {
